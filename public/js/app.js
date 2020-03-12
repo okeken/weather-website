@@ -1,7 +1,5 @@
 //import { response } from 'express';
 
-console.log('JS Client Script is loaded 2');
-
 let cityInput = document.querySelector('#cityInput');
 let address = cityInput.value;
 
@@ -20,8 +18,7 @@ form.addEventListener('submit', e => {
   dataLocation.innerHTML = '';
   dataSummary.innerHTML = '';
 
-  let url =
-    'http://localhost:4000/weather?address=' + encodeURIComponent(address);
+  let url = '/weather?address=' + encodeURIComponent(address);
 
   fetch(url).then(response => {
     response.json().then(data => {
