@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" href="img/weather.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src='app.js'></script>
+
+
+</head>
+
+<body>
+    {{>header}}
+    <div class="main-content">
+        <h3>{{title}}</h3>
+        <p>Use this site to get your weather forcast</p>
+        <form>
+            <input placeholder="Input Location" id='cityInput'>
+            <button>SEARCH</button>
+        </form>
+        <div class="data-return">
+            <div class='error-msg'></div>
+            <div class='data-location'></div>
+            <div class="data-summary"></div>
+        </div>
+    </div>
+    {{>footer}}
+
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>
