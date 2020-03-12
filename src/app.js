@@ -82,6 +82,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log('Server is up on' + port');
+app.listen(4000, () => {
+  console.log('Server is up on port ' + port);
 });
