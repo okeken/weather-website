@@ -20,12 +20,42 @@
             <input placeholder="Input Location" id='cityInput'>
             <button>SEARCH</button>
         </form>
-        <div class="data-return">
-            <div class='error-msg'></div>
-            <div class='data-location'></div>
-            <div class="data-summary"></div>
+
+
+        <div class='error-msg'> </div>
+        <div class="data-bg">
+
+            <div class="spinner loading">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+
+            <div class="weather-resp">
+
+                <div class="data-rt">
+                    <div class='res-location'></div>
+                    <div class="class-hold">
+                        <span class="w-temp-sum"></span>
+                        <span class="w-head-sum">
+
+                        </span>
+                        <div class="headings-sum">
+                            <span class="app-temp"></span>
+                            <span class="temp-low"></span>
+                            <span class="temp-high"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-summary"></div>
+
+            </div>
         </div>
+
     </div>
+
+
+
     {{>footer}}
 
     <script src="./js/app.js"></script>

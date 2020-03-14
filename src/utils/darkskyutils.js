@@ -11,12 +11,16 @@ const weather = (lat, long, callback) => {
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback('Unable to connect', undefined);
-    } else if (body.error) {
-      callback('Incorrect Inputs', undefined);
     } else {
       callback(undefined, {
         longitude: body.longitude,
         latitude: body.latitude,
+        icon: body.currently.icon,
+        currentTemp: body.currently.temperature,
+        currSummary: body.currently.summary,
+        apparentTemp: body.currently.apparentTemperature,
+        lowTemp: body.daily.data[0].temperatureLow,
+        highTemp: body.daily.data[0].temperatureHigh,
         summary: body.daily.data[0].summary
       });
     }

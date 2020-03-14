@@ -1,4 +1,3 @@
-//const request = require('request');
 const geoCode = require('./utils/geocode');
 const weather = require('./utils/darkskyutils');
 const path = require('path');
@@ -67,9 +66,15 @@ app.get('/weather', (req, res) => {
         }
 
         res.send({
-          forecast: callback.summary,
           address: req.query.address,
-          location
+          location,
+          icon: callback.icon,
+          currentTempe: callback.currentTemp + '˚',
+          headSummary: callback.currSummary,
+          apparentTempe: 'Feels like: ' + callback.apparentTemp,
+          forecast: callback.summary,
+          highTemperature: 'High: ' + callback.highTemp,
+          lowTemperature: 'Low: ' + callback.lowTemp
         });
       });
     }

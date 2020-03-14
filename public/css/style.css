@@ -79,3 +79,150 @@ button:hover {
 .data-summary {
   line-height: 1.5rem;
 }
+
+.data-bg {
+  margin: 2rem auto;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.summary {
+  display: block;
+}
+
+.w-temp-sum,
+.w-head-sum {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.headings-sum {
+  margin-top: 1rem;
+}
+
+.res-location {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.data-summary {
+  display: none;
+  margin-top: 1.2rem;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.data-summary-dec {
+  background: whitesmoke;
+  border-left: 2px solid orange;
+}
+
+.weather-resp {
+  display: none;
+}
+
+/****
+Error
+*****/
+
+.error-msg {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+.error-msg-bd {
+  margin-left: 0.4rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.close-x {
+  border-radius: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 7px solid #f56b00;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 43%,
+      #fff 45%,
+      #fff 55%,
+      rgba(0, 0, 0, 0) 57%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      135deg,
+      #f56b00 0%,
+      #f56b00 43%,
+      #fff 45%,
+      #fff 55%,
+      #f56b00 57%,
+      #f56b00 100%
+    );
+}
+
+/***************
+Loading Animation
+****************/
+.loading {
+  display: none;
+}
+.show {
+  display: block;
+}
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
