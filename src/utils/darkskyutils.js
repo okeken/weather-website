@@ -21,7 +21,7 @@ const weather = (lat, long, callback) => {
         apparentTemp: body.currently.apparentTemperature,
         lowTemp: body.daily.data[0].temperatureLow,
         highTemp: body.daily.data[0].temperatureHigh,
-        summary: body.daily.data[0].summary
+        summary: body.daily.data[0].summary,
       });
     }
   });
