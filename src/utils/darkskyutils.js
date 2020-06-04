@@ -1,8 +1,10 @@
 const request = require('request');
 
+//Environment Variable Setup
+require('dotenv').config();
 const weather = (lat, long, callback) => {
   const url =
-    'https://api.darksky.net/forecast/6ac586665c85c68622662e6d5bac50cf/' +
+    process.env.INPUT_DECODER +
     encodeURIComponent(lat) +
     ',' +
     encodeURIComponent(long) +

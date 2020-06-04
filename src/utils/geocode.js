@@ -1,10 +1,16 @@
 const request = require('request');
 
+//Environment Variable Setup
+require('dotenv').config();
+
+const word = process.env.GEO_CODE;
+
 const geoCode = (address, callback) => {
+  console.log(word);
   const url =
-    'https://api.mapbox.com/geocoding/v5/mapbox.places/' +
+    process.env.GEO_CODE_URL +
     encodeURIComponent(address) +
-    '.json?access_token=pk.eyJ1Ijoib2tla2VuIiwiYSI6ImNrNzRjcnQ1ZjAwZXIzc21ycmVseTkzNG8ifQ.yLLHREVV-oG7gxj1Z98LMA&limit=1';
+    process.env.GEO_CODE_API_KEY;
 
   request({ url, json: true }, (error, { body } = {}) => {
     if (error) {
